@@ -4,14 +4,15 @@ import json
 
 
 img_path = input("Enter the path of the image: ")
-image = Image.open("images/"+img_path)
+
 
 try:
     os.mkdir(f"results/{img_path.split('.')[0]}")
 except:
     pass
 for no in range(2,9):
-    path = f"results/{img_path.split('.')[0]}/k{2**no}/]}"
+    image = Image.open("images/"+img_path)
+    path = f"results/{img_path.split('.')[0]}/k{2**no}/"
     try:
         os.mkdir(path)
     except:
@@ -19,8 +20,9 @@ for no in range(2,9):
 
     im = image.quantize(2**no , method=1)
 
-    im.save(path+"/reconstructed.png")
-
+    
+    im = im.convert('RGB')
+    im.save(path+"reconstructed.png")
     errors = {"MSE" : 0, "MAE" : 0}
 
     width, height = image.size
@@ -37,5 +39,5 @@ for no in range(2,9):
     '''
     Save the result matrics
     '''
-    with open(f"{path}/result.json", "w") as f:
+    with open(f"{path}result.json", "w") as f:
         json.dump(errors, f)
