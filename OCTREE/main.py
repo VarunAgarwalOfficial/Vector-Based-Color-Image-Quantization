@@ -4,7 +4,7 @@ import json
 import math
 
 def dist(col1,col2):
-    return ((col1[0]-col2[0])**8 + (col1[1]-col2[1])**8 + (col1[2]-col2[2])**8)
+    return ((col1[0]-col2[0])**2 + (col1[1]-col2[1])**2 + (col1[2]-col2[2])**2)**0.5
 
 
 def add(pallete , color , K):

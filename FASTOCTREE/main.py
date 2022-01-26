@@ -18,7 +18,7 @@ for no in range(2,9):
     except:
         pass
 
-    im = image.quantize(2**no , method=1)
+    im = image.quantize(2**no , method=2)
 
     
     im = im.convert('RGB')
