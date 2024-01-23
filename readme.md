@@ -140,10 +140,11 @@ MAE values for all test images using the benchmark algorithms and the proposed m
 |         | MEDIAN CUT     | 43.20  | 31.47  | 24.60  | 18.53  | 14.64  | 11.57  |
 
 
-Here are some Graphs - 
+#### Here are some Graphs - 
 
 
-MSE
+#####  MSE
+
 ![Image 1](./results/MSE/bar/AIRPLANE.png)
 ![Image 2](./results/MSE/bar/LENNA.png)
 ![Image 3](./results/MSE/bar/MANDRIL.png)
@@ -154,7 +155,8 @@ MSE
 
 
 
-MAE
+##### MAE
+
 ![Image 1](./results/MAE/bar/AIRPLANE.png)
 ![Image 2](./results/MAE/bar/LENNA.png)
 ![Image 3](./results/MAE/bar/MANDRIL.png)
