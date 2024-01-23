@@ -12,22 +12,20 @@
 ## Abstract
 This repository presents the implementation of Vector Based Color Image Quantization (VB-CIQ), a novel algorithm for generating color palettes from images. VB-CIQ utilizes graph algorithms for color selection, reducing runtime complexity, and optimizing computational power usage. The algorithm extends to 3D, addressing each component of the RGB values. Keywords: Color Image Quantization, Color Palette Generation, Vector Quantization, Image Processing.
 
-## 1. Introduction
+## Introduction
 Color Image Quantization involves generating a color palette, crucial for various image processing applications. This research focuses on color palette generation, enabling users to specify the number of colors for any image. Each pixel in an image has three components: red, green, and blue. Ambiguities in color distance measurement persist, with debates on metrics like Euclidean distance and Hue distance.
 
-## 2. Related Work and Methods
-This section provides an overview of major algorithms used in color image quantization, including Octree, K-Means, and distance metrics such as Euclidean distance.
 
-## 3. Proposed Method
+## Proposed Method
 VB-CIQ is presented as a two-phase algorithm. The first phase involves dimension reduction, creating a frequency map, and clustering colors within a threshold distance. The second phase focuses on color palette generation, using the reduced color set to create an undirected graph. Representative colors are iteratively selected based on the highest indegree, ensuring a diverse palette.
 
-### 3.1 Graph Creation
+### Graph Creation
 Initialize a 2D adjacency matrix, set a threshold distance (`dmax`), and create edges between colors within the threshold distance.
 
-### 3.2 Reduction Algorithm
+###  Reduction Algorithm
 Reduce dimensions by iterating over colors, clustering within a threshold distance, and creating a new color array.
 
-### 3.3 VB-CIQ Algorithm
+### VB-CIQ Algorithm
 1. Generate a frequency map of all colors.
 2. Initialize a palette of size `k`.
 3. Use the reduction algorithm on colors.
@@ -39,10 +37,10 @@ Reduce dimensions by iterating over colors, clustering within a threshold distan
    - Remove the selected node from the graph.
 6. Return the generated palette.
 
-## 4. Experimental Setup and Results
+## Experimental Setup and Results
 VB-CIQ has been tested against benchmark algorithms (Octree, K-Means, Maximum Coverage, Median Cut) on six standard color images. Key learning includes the algorithm's focus on depth for different `k` values.
 
-### 4.1 Test Images
+### Test Images
 
 All the images have been taken from http://www.hlevkin.com/hlevkin/06testimages.htm and http://www.imageprocessingplace.com/root_files_V3/image_databases.htm . The reason for choosing images from these sources was to test algorithms regarding Color Image Quantization on images that were uncompressed. Each of these images have a file format of either .tiff/.tif/.bmp. For high quality images, a Tagged Image File Format (TIFF) /Bitmap (BMP) file format serves as an excellent representative.
 
@@ -56,17 +54,17 @@ All the images have been taken from http://www.hlevkin.com/hlevkin/06testimages.
 
 
 
-### 4.2 Benchmark Algorithms
+### Benchmark Algorithms
 Benchmark algorithms, including Octree, K-Means, Maximum Coverage, and Median Cut, were used for comparison.
 
-### 4.3 Performance Evaluation
+### Performance Evaluation
 VB-CIQ consistently outperformed other algorithms, as indicated by lower Mean Squared Error (MSE) and Mean Absolute Error (MAE) values. Visual comparisons showcased its superior performance in maintaining image details.
 
-### 4.4 Key Learning
+### Key Learning
 - VB-CIQ focuses on depth for lower `k` values, showcasing adaptability.
 - Superior visual fidelity observed across various `k` values.
 
-### 4.5 Results
+### Results
 
 MSE values for all test images using the benchmark algorithms and the proposed method
 
@@ -165,7 +163,7 @@ MAE values for all test images using the benchmark algorithms and the proposed m
 ![Image 6](./results/MAE/bar/YACHT.png)
 
 
-## 5. Conclusion
+## Conclusion
 VB-CIQ introduces a novel algorithm for color image quantization, showcasing superior performance in terms of quantization accuracy and visual fidelity. The algorithm's focus on depth and adaptability to different `k` values positions it as a benchmark for future studies in color image quantization.
 
 For usage instructions and code implementation, please refer to the provided source code files. Feel free to contact the authors for any inquiries or collaborations.
