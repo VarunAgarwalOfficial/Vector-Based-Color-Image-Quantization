@@ -1,13 +1,8 @@
 # Vector Based Color Image Quantization (VB-CIQ)
 
-## Authors
-- Navneet Melarkode
-  - School of Computer Science Engineering, VIT, Vellore, India
-  - Email: navneetmelarkode@gmail.com
+Research code for VB-CIQ, a graph-based way to pick a colour palette for an image, compared with octree, fast octree, K-means, maximum coverage and median cut on six standard test images.
 
-- Varun Agarwal
-  - School of Computer Science Engineering, VIT, Vellore, India
-  - Email: varunswaika@gmail.com
+**Status:** unpublished research code from VIT Vellore, written with a fellow student in 2022 and tidied later. The write-up is `Vector-Based-Approach-For-Color-Image-Quantization.pdf`; it has not been published.
 
 ## Abstract
 This repository presents the implementation of Vector Based Color Image Quantization (VB-CIQ), a novel algorithm for generating color palettes from images. VB-CIQ utilizes graph algorithms for color selection, reducing runtime complexity, and optimizing computational power usage. The algorithm extends to 3D, addressing each component of the RGB values. Keywords: Color Image Quantization, Color Palette Generation, Vector Quantization, Image Processing.
@@ -58,11 +53,8 @@ All the images have been taken from http://www.hlevkin.com/hlevkin/06testimages.
 Benchmark algorithms, including Octree, K-Means, Maximum Coverage, and Median Cut, were used for comparison.
 
 ### Performance Evaluation
-VB-CIQ consistently outperformed other algorithms, as indicated by lower Mean Squared Error (MSE) and Mean Absolute Error (MAE) values. Visual comparisons showcased its superior performance in maintaining image details.
+In the tables below VB-CIQ has the lowest Mean Squared Error (MSE) in most of the 36 image and palette-size combinations, though not all: median cut, K-means or fast octree is lower in 7 of them, mostly at k = 8 and 16.
 
-### Key Learning
-- VB-CIQ focuses on depth for lower `k` values, showcasing adaptability.
-- Superior visual fidelity observed across various `k` values.
 
 ### Results
 
@@ -163,7 +155,24 @@ MAE values for all test images using the benchmark algorithms and the proposed m
 ![Image 6](./results/MAE/bar/YACHT.png)
 
 
-## Conclusion
-VB-CIQ introduces a novel algorithm for color image quantization, showcasing superior performance in terms of quantization accuracy and visual fidelity. The algorithm's focus on depth and adaptability to different `k` values positions it as a benchmark for future studies in color image quantization.
+## Run it
 
-For usage instructions and code implementation, please refer to the provided source code files. Feel free to contact the authors for any inquiries or collaborations.
+```bash
+pip install numpy pillow opencv-python scikit-image matplotlib jupyter
+```
+
+- VB-CIQ itself is in `VB-CIQ/ROW.ipynb`, with its graph node class in `VB-CIQ/Node.py`.
+- Each benchmark has its own folder (`K-MEANS/`, `OCTREE/`, `FASTOCTREE/`, `MAXIMUM/`, `MEDIAN CUT/`). Run `python main.py` inside a folder: it quantises every image in that folder's `images/` at k = 4 to 256 and writes the reconstructed image and its errors to `results/`.
+- `results/results.ipynb` gathers the errors into the tables and graphs above.
+
+## Tech
+
+Python, NumPy, Pillow, OpenCV, scikit-image, Matplotlib, Jupyter.
+
+## Context
+
+Personal research project at VIT Vellore, 2022, which grew out of an earlier K-means experiment, [Custom-Clustering](https://github.com/VarunAgarwalOfficial/Custom-Clustering).
+
+## License
+
+Written with a co-author; no licence has been added.
