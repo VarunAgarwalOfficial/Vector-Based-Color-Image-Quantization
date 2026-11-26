@@ -173,6 +173,10 @@ Python, NumPy, Pillow, OpenCV, scikit-image, Matplotlib, Jupyter.
 
 Personal research project at VIT Vellore, 2022, which grew out of an earlier K-means experiment, [Custom-Clustering](https://github.com/VarunAgarwalOfficial/Custom-Clustering).
 
-## License
+## Status
+
+Finished, as of 26 November 2026. Not published. See [STATUS.md](STATUS.md).
+
+## Licence
 
 Written with a co-author; no licence has been added.
