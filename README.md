@@ -173,7 +173,7 @@ Python, NumPy, Pillow, OpenCV, scikit-image, Matplotlib, Jupyter.
 
 ## Context
 
-Personal research project at VIT Vellore, 2022, which grew out of an earlier K-means experiment, [Custom-Clustering](https://github.com/VarunAgarwalOfficial/Custom-Clustering).
+Personal research project at VIT Vellore, 2022, which grew out of an earlier K-means experiment, [Custom-Clustering](https://github.com/varunswaika/Custom-Clustering).
 
 ## Status
 
