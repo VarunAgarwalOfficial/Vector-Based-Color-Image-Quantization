@@ -181,4 +181,4 @@ Finished, as of 26 November 2026. Not published. See [STATUS.md](STATUS.md).
 
 ## Licence
 
-Written with a co-author; no licence has been added.
+MIT, written with Navneet Melarkode. See [LICENSE](LICENSE).
