@@ -1,6 +1,8 @@
-# Vector Based Color Image Quantization (VB-CIQ)
+<p align="center"><img src="docs/banner.png" alt="Pixel art: a painting on an easel, smooth on one half and flat colours on the other" width="100%"></p>
 
-Research code for VB-CIQ, a graph-based way to pick a colour palette for an image, compared with octree, fast octree, K-means, maximum coverage and median cut on six standard test images.
+# VB-CIQ
+
+VB-CIQ: graph-based colour palette selection, benchmarked against octree, K-means and median cut (unpublished).
 
 **Status:** unpublished research code from VIT Vellore, written with a fellow student in 2022 and tidied later. The write-up is `Vector-Based-Approach-For-Color-Image-Quantization.pdf`; it has not been published.
 
