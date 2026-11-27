@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/banner.png" alt="Pixel art: a painting on an easel, smooth on one half and flat colours on the other" width="100%"></p>
+<p align="center"><img src="docs/banner.png" alt="Pixel art: a full-colour landscape and the same picture in a few flat colours, with its palette swatches" width="100%"></p>
 
 # VB-CIQ
 
